@@ -8,6 +8,7 @@ CREATE TABLE Noticias(
    tituloNoticia VARCHAR(500) NOT NULL,
    contenidoNoticia TEXT NOT NULL,
    idCategoria INT(11) NOT NULL,
+   fechaPublicacion DATETIME NOT NULL DEFAULT NOW(),
    FOREIGN KEY (idCategoria) REFERENCES Categorias(idCategoria)
 );
 
