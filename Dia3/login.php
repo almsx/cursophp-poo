@@ -9,9 +9,6 @@ if (empty($_POST["userBD"]) && empty($_POST["passBD"])){
     
 } else {
 
-	//header("Location: panel.php");
-	//echo "Si iniciaste sesion";
-
 	$usuario = $_POST['userBD'];
 	$contras = $_POST['passBD'];
 
@@ -24,10 +21,20 @@ if (empty($_POST["userBD"]) && empty($_POST["passBD"])){
 
 	$filas = mysqli_num_rows($run);
 
-	//echo 'Hay '.$filas.' resultados';
-
 	if($filas !=0){
 		
+		session_start();
+		
+		while($row=mysqli_fetch_array($run)) {  
+ 			$nombre=$row[1];  
+     		$apellido=$row[2];  
+             
+   			echo $nombre.' '.$apellido;
+   			$nameCompleto = $nombre.' '.$apellido;
+   			$_SESSION['nombreApp'] = $nameCompleto;
+
+ 		}
+
 		header("Location: panel.php");
 
 	} else {
