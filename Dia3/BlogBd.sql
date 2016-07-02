@@ -33,7 +33,7 @@ CREATE TABLE Respuestas(
 	idRespuesta INT(11) NOT NULL PRIMARY KEY,
 	nombreRespuesta TEXT NOT NULL,
 	idEncuesta INT (11) NOT NULL,
-	FOREIGN KEY idEncuesta REFERENCES Encuestas.idEncuesta 
+	FOREIGN KEY (idEncuesta) REFERENCES Encuestas(idEncuesta) 
 );
 
 CREATE TABLE Visitantes(
@@ -51,6 +51,6 @@ CREATE TABLE Comentarios(
 	moderacion VARCHAR(1) NOT NULL DEFAULT '0',
 	idNoticia INT(11) NOT NULL,
 	idVisitante INT(11) NOT NULL,
-	FOREIGN KEY(idNoticia) REFERENCES Noticias.idNoticia,
-	FOREIGN KEY(idVisitante) REFERENCES Visitantes.idVisitante
+	FOREIGN KEY(idNoticia) REFERENCES Noticias(idNoticia),
+	FOREIGN KEY(idVisitante) REFERENCES Visitantes(idVisitante)
 );
