@@ -54,3 +54,12 @@ CREATE TABLE Comentarios(
 	FOREIGN KEY(idNoticia) REFERENCES Noticias(idNoticia),
 	FOREIGN KEY(idVisitante) REFERENCES Visitantes(idVisitante)
 );
+
+CREATE TABLE Fotografias(
+	idFotografia INT(11) NOT NULL PRIMARY KEY,
+	url TEXT NOT NULL,
+	idAlbum INT(11) NOT NULL,
+	idAutor INT(11) NOT NULL,
+	FOREIGN KEY(idAlbum) REFERENCES Albums(idAlbum),
+	FOREIGN KEY(idAutor) REFERENCES Autores(idAutor)
+);
