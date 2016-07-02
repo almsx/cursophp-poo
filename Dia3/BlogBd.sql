@@ -8,7 +8,7 @@ CREATE TABLE Noticias(
    tituloNoticia VARCHAR(500) NOT NULL,
    contenidoNoticia TEXT NOT NULL,
    idCategoria INT(11) NOT NULL,
-   FOREIGN KEY idCategoria REFERENCES Categorias.idCategoria
+   FOREIGN KEY (idCategoria) REFERENCES Categorias(idCategoria)
 );
 
 CREATE TABLE Autores(
