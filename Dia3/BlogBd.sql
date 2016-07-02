@@ -1,10 +1,10 @@
 CREATE TABLE Categorias(
-	idCategoria INT(11) NOT NULL PRIMARY KEY,
+	idCategoria INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	tituloCategoria VARCHAR(100) NOT NULL DEFAULT 'General'
 );
 
 CREATE TABLE Noticias(
-   idNoticia INT(11) NOT NULL PRIMARY KEY,
+   idNoticia INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
    tituloNoticia VARCHAR(500) NOT NULL,
    contenidoNoticia TEXT NOT NULL,
    idCategoria INT(11) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE Noticias(
 );
 
 CREATE TABLE Autores(
-	idAutor INT(11) NOT NULL PRIMARY KEY,
+	idAutor INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nombre VARCHAR(30) NOT NULL,
 	apellido VARCHAR(30) NOT NULL,
 	usuario VARCHAR(30) NOT NULL,
@@ -20,24 +20,24 @@ CREATE TABLE Autores(
 );
 
 CREATE TABLE Albums(
-	idAlbum INT(11) NOT NULL PRIMARY KEY,
+	idAlbum INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nombreAlbum VARCHAR(100) NOT NULL
 );
 
 CREATE TABLE Encuestas(
-	idEncuesta INT(11) NOT NULL PRIMARY KEY,
+	idEncuesta INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	pregunta TEXT NOT NULL
 );
 
 CREATE TABLE Respuestas(
-	idRespuesta INT(11) NOT NULL PRIMARY KEY,
+	idRespuesta INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nombreRespuesta TEXT NOT NULL,
 	idEncuesta INT (11) NOT NULL,
 	FOREIGN KEY (idEncuesta) REFERENCES Encuestas(idEncuesta) 
 );
 
 CREATE TABLE Visitantes(
-	idVisitante INT(11) NOT NULL PRIMARY KEY,
+	idVisitante INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nombreVisitante VARCHAR(100) NOT NULL,
 	apellidoVisitante VARCHAR(100) NOT NULL,
 	usuarioVisitante VARCHAR(30) NOT NULL,
@@ -45,7 +45,7 @@ CREATE TABLE Visitantes(
 );
 
 CREATE TABLE Comentarios(
-	idComentario INT(11) NOT NULL PRIMARY KEY,
+	idComentario INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	fechaComentario DATE NOT NULL,
 	comentario TEXT NOT NULL,
 	moderacion VARCHAR(1) NOT NULL DEFAULT '0',
@@ -56,7 +56,7 @@ CREATE TABLE Comentarios(
 );
 
 CREATE TABLE Fotografias(
-	idFotografia INT(11) NOT NULL PRIMARY KEY,
+	idFotografia INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	url TEXT NOT NULL,
 	idAlbum INT(11) NOT NULL,
 	idAutor INT(11) NOT NULL,
