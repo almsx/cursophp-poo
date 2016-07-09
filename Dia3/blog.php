@@ -6,8 +6,8 @@
 </head>
 <body>
 	<h1>Blog</h1>
-	<a href="nuevaEntrada.php">Nueva Entrada</a>
+	<a href="../Dia4/insertarEntrada.php">Nueva Entrada</a>
 	<h1>Categorias</h1>
-	<a href="nuevaCategoria.php">Nueva Categoria</a>
+	<a href="../Dia4/insertarnuevaCategoria.php">Nueva Categoria</a>
 </body>
 </html>

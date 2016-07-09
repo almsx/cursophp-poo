@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Bienvenidos al Blog del Curso de PHP</h1>
-	<a href="admin.php">Ingresar al Admin de Blog</a>
+	<a href="../Dia3/login.html">Ingresar al Admin de Blog</a>
 	<br/>
 	<br/>
 	<h1>Noticias</h1>
@@ -20,35 +20,32 @@
     		Noticias.tituloNoticia,
     		Noticias.contenidoNoticia,
     		Noticias.idCategoria, 
-    		Noticias.fechaPublicacionCompleta, 
-    		Noticias.usuarioPublica,
-    		Noticias.categoriaPublica,
-    		categoriasBlog.idCategoria,
-    		categoriasBlog.nombreCategoria,
-    		usuariosBlog.idUsuario, 
-    		usuariosBlog.nombres,
-    		usuariosBlog.pais,
-    		usuariosBlog.apPaterno,
-    		usuariosBlog.apMaterno
-			FROM noticiasBlog
-			LEFT JOIN usuariosBlog ON noticiasBlog.usuarioPublica = usuariosBlog.idUsuario 
-			LEFT JOIN categoriasBlog ON noticiasBlog.categoriaPublica = categoriasBlog.idCategoria
-			ORDER BY noticiasBlog.fechaPublicacion DESC
+            Noticias.idAutor,
+    		Noticias.fechaPublicacion, 
+    		categorias.idCategoria,
+    		categorias.tituloCategoria,
+    		Autores.idAutor, 
+    		Autores.nombre,
+    		Autores.apellido
+			FROM Noticias
+			LEFT JOIN Autores ON Noticias.idAutor = Autores.idAutor
+			LEFT JOIN categorias ON Noticias.idCategoria = categorias.idCategoria
+			ORDER BY Noticias.fechaPublicacion DESC
 			";
         
         	$run=mysqli_query($dbcon,$view_users_query);  
   
         	while($row=mysqli_fetch_array($run)) { 
-        		$autor = $row[11] . ' ' . $row[13] . '  ' . $row[14]; 
+        		$autor = $row[9] . ' ' . $row[10]; 
         		?>
 
-        		<h1><?php echo $row[2]; ?></h1>
-        		<h3><?php echo "Publicado por ".$autor . " el Día " . $row[1]; ?></h3>
+        		<h1><?php echo $row[1]; ?></h1>
+        		<h3><?php echo "Publicado por ".$autor . " el Día " . $row[5]; ?></h3>
         		<br/>
-        		<?php echo $row[4]; ?>
+        		<?php echo $row[2]; ?>
         		<br/>
         		<br/>
-        		<?php echo "Escrito en su computadora desde ".$row[12] . " para la Redacción de: " . $row[9] . " <a href='comentarios.php'> Comentarios</a>"; ?> 
+        		<?php echo "Escrito para la Redacción de: " . $row[7]  ?> 
 
             	
             	
