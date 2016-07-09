@@ -3,21 +3,23 @@ CREATE TABLE Categorias(
 	tituloCategoria VARCHAR(100) NOT NULL DEFAULT 'General'
 );
 
-CREATE TABLE Noticias(
-   idNoticia INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-   tituloNoticia VARCHAR(500) NOT NULL,
-   contenidoNoticia TEXT NOT NULL,
-   idCategoria INT(11) NOT NULL,
-   fechaPublicacion DATETIME NOT NULL DEFAULT NOW(),
-   FOREIGN KEY (idCategoria) REFERENCES Categorias(idCategoria)
-);
-
 CREATE TABLE Autores(
 	idAutor INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
 	nombre VARCHAR(30) NOT NULL,
 	apellido VARCHAR(30) NOT NULL,
 	usuario VARCHAR(30) NOT NULL,
 	password VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE Noticias(
+   idNoticia INT(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+   tituloNoticia VARCHAR(500) NOT NULL,
+   contenidoNoticia TEXT NOT NULL,
+   idCategoria INT(11) NOT NULL,
+   fechaPublicacion DATETIME NOT NULL DEFAULT NOW(),
+   idAutor INT(11) NOT NULL,
+   FOREIGN KEY (idCategoria) REFERENCES Categorias(idCategoria),
+   FOREIGN KEY (idAutor) REFERENCES Autores(idAutor)
 );
 
 CREATE TABLE Albums(
