@@ -26,12 +26,14 @@ if (empty($_POST["userBD"]) && empty($_POST["passBD"])){
 		session_start();
 		
 		while($row=mysqli_fetch_array($run)) {  
+			$idUsuario=$row[0];
  			$nombre=$row[1];  
      		$apellido=$row[2];  
              
    			echo $nombre.' '.$apellido;
    			$nameCompleto = $nombre.' '.$apellido;
    			$_SESSION['nombreApp'] = $nameCompleto;
+   			$_SESSION['idAutor'] = $idUsuario;
 
  		}
 
