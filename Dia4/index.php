@@ -31,6 +31,7 @@
 			LEFT JOIN Autores ON Noticias.idAutor = Autores.idAutor
 			LEFT JOIN categorias ON Noticias.idCategoria = categorias.idCategoria
 			ORDER BY Noticias.fechaPublicacion DESC
+            
 			";
         
         	$run=mysqli_query($dbcon,$view_users_query);  
