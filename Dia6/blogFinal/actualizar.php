@@ -9,7 +9,7 @@ include("../../utils/cnxdia3.php");
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Actualizar Entrada</title>
 </head>
 <body>
 <?php

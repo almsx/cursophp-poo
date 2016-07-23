@@ -1,25 +1,21 @@
-	<!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<meta charset="UTF-8">
-		<title>Document</title>
-	</head>
-	<body>
-		<meta charset="UTF-8">  
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<?php
 
-		<?php 
+//Reanudamos la sesión 
+session_start(); 
 
+//Validamos si existe realmente una sesión activa o no 
+if(isset($_SESSION['nombreApp'])){ 
+	
+	
+	session_start();
+	session_destroy();
+	header("Location: panel.php"); 
+	exit();
+  
+} else {
+	header("Location: index.php"); 
+	exit();
 
-		session_start();
-		session_destroy();
-		echo "Su Sesión finalizo exitosamente";
-		echo "<br/>";
-		echo "<br/>";
-		echo "<a href=login.php>  Iniciar Sesion</a>";
+}
 
-		?>
-	</body>
-	</html>
-
-
+?>

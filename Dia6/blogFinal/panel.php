@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>Panel de Control Blog</title>
 </head>
 <body>
 <meta charset="UTF-8">  
