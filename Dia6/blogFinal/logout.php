@@ -16,7 +16,7 @@
 		echo "Su Sesión finalizo exitosamente";
 		echo "<br/>";
 		echo "<br/>";
-		echo "<a href=login.html>  Iniciar Sesion</a>";
+		echo "<a href=login.php>  Iniciar Sesion</a>";
 
 		?>
 	</body>

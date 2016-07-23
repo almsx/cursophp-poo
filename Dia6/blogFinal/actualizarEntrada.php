@@ -9,7 +9,7 @@ if (empty($_POST["pTituloNoticia"]) && empty($_POST["pCategoriaPublicacion"])  &
     
     echo "No puedes actualizar esta noticia si no te logueas";
     echo "<br/>";
-    echo "<a href=login.html>  Ir a Login</a>";
+    echo "<a href=login.php>  Ir a Login</a>";
     
 } else {
 

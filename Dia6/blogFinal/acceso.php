@@ -8,7 +8,7 @@ if (empty($_POST["pUsuario"]) && empty($_POST["pContra"])){
     
     echo "Vienen vacios o no iniciaste la sesión";
     echo "<br/>";
-    echo "<a href=login.html>  Iniciar Sesion</a>";
+    echo "<a href=login.php>  Iniciar Sesion</a>";
     
 } else {
 
@@ -47,7 +47,7 @@ if (empty($_POST["pUsuario"]) && empty($_POST["pContra"])){
 	} else {
 		echo "Usuario incorrecto, favor de verificar";
 		echo "<br/>";
-    	echo "<a href=login.html>  Iniciar Sesion</a>";
+    	echo "<a href=login.php>  Iniciar Sesion</a>";
 
 	}
 }

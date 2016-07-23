@@ -8,11 +8,11 @@ if($_SESSION["nombreApp"] != ""){
   
 } else {
 	//Si no hay sesión activa, lo direccionamos al index.php (inicio de sesión) 
-	header("Location: login.html"); 
+	header("Location: login.php"); 
   	exit();
   	//echo "Esta sección no esta autorizada para verla si no te autentificas";
   	//echo "<br/>";
-   	//echo "<a href=login.html>  Iniciar Sesion</a>"; 
+   	//echo "<a href=login.php>  Iniciar Sesion</a>"; 
 }
 
 ?>

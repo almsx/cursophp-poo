@@ -1,3 +1,18 @@
+<?php
+
+//Reanudamos la sesión 
+session_start(); 
+
+//Validamos si existe realmente una sesión activa o no 
+if(isset($_SESSION['nombreApp'])){ 
+	
+	header("Location: panel.php"); 
+	exit();
+  
+} else {
+	
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,3 +34,7 @@
 
 </body>
 </html>
+
+<?php
+}
+?>
