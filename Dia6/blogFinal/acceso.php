@@ -15,8 +15,9 @@ if (empty($_POST["pUsuario"]) && empty($_POST["pContra"])){
 	$usuario = $_POST['pUsuario'];
 	$contras = $_POST['pContra'];
 
-
-	include("../utils/cnxdia3.php");
+	//Cada dos puntos significa un nivel de carpeta
+	//A subir para el usuario
+	include("../../utils/cnxdia3.php");
 
 	$view_users_query="SELECT idAutor, nombre, apellido FROM Autores WHERE usuario ='".$usuario."' AND password='".$contras."';"; 
 
