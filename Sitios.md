@@ -14,3 +14,6 @@ Sitio Oficial MySQL - http://dev.mysql.com/doc/refman/5.7/en/data-type-defaults.
 
 ##Obtener Iconos para los proyectos
 Flat Icon - http://www.flaticon.com
+
+## Sitio de Bibliografia para HTML5
+W3 Schools para HTML 5 - http://www.w3schools.com/tags/tag_textarea.asp

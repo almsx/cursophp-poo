@@ -4,7 +4,7 @@ include("seguridad.php");
 include("../../utils/cnxdia3.php");
 //print_r($_POST);
 
-if (empty($_POST["pTituloNoticia"]) && empty($_POST["categoriaPublicacion"])  && empty($_POST["pNoticia"])  ){
+if (empty($_POST["pTituloNoticia"]) && empty($_POST["pCategoriaPublicacion"])  && empty($_POST["pNoticia"])  ){
     
     echo "No puedes insertar Noticias vacias";
     echo "<br/>";
@@ -16,8 +16,8 @@ if (empty($_POST["pTituloNoticia"]) && empty($_POST["categoriaPublicacion"])  &&
 	//$contras = $_POST['pContra'];
 
 	$tituloNoticia = $_POST['pTituloNoticia'];
-	$categoriaPublicacion = $_POST['categoriaPublicacion'];
-	$noticiaCompleta = $_POST['pNoticia'];
+	$categoriaPublicacion = $_POST['pCategoriaPublicacion'];
+	$noticiaCompleta = $_POST['pContenidoCompleto'];
 	$idAutor = $_SESSION['idAutor'];
 
 	$queryInsert = "INSERT INTO Noticias (tituloNoticia,contenidoNoticia,idCategoria,idAutor) VALUES ('$tituloNoticia','$noticiaCompleta','$categoriaPublicacion','$idAutor');";

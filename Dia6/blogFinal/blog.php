@@ -9,8 +9,8 @@
 
 <body>
 	<?php
-    echo "hola mundo";
-	include("seguridad.php"); 
+    include("seguridad.php"); 
+    include("../../utils/cnxdia3.php");
 	//session_start();
 	echo "Bienvenido al Administrador del Blog, ".$_SESSION['nombreApp']. " <a href=logout.php>Cerrar Sesión</a>";
 	echo "<br/><br/>";
@@ -35,7 +35,7 @@
         </thead>  
   
         <?php  
-        include("../../utils/cnxdia3.php");
+        
         
 		$view_users_query = "
 	 		SELECT 
