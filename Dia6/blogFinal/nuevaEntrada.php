@@ -31,7 +31,7 @@ include("seguridad.php");
 
 		</select>
 		<br/><br/>
-		<input type="text" placeHolder="Texto de la noticia"/>
+		<input type="text" placeHolder="Texto de la noticia" name="pNoticia"/>
 		<br/><br/>
 		<input type="submit" value="Guardar Noticia"/>
 	</form>
