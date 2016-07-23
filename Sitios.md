@@ -11,3 +11,6 @@ Zonas Horarios Admitidas por PHP - http://php.net/manual/es/timezones.php
 
 ##Funciones de Fechas MySQL
 Sitio Oficial MySQL - http://dev.mysql.com/doc/refman/5.7/en/data-type-defaults.html
+
+##Obtener Iconos para los proyectos
+Flat Icon - http://www.flaticon.com
