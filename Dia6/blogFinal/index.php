@@ -6,7 +6,7 @@
 </head>
 <body>
 	<h1>Bienvenidos al Blog del Curso de PHP</h1>
-	<a href="../Dia3/login.html">Ingresar al Admin de Blog</a>
+	<a href="login.html">Ingresar al Admin de Blog</a>
 	<br/>
 	<br/>
 	<h1>Noticias</h1>
