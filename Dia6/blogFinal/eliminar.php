@@ -21,7 +21,7 @@ if (empty($_GET["id"])){
     	
     	echo "Eliminación correcta";
     	echo "<br/>";
-    	echo "<a href='blog.php'>Ir al Administrador del Blog</a>";
+    	echo "<a href='autores.php'>Ir al Administrador de Autores </a>";
 	} else{
     	echo "Error en la consulta $queryInsert";
 	}

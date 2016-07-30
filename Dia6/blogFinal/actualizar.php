@@ -70,22 +70,31 @@ include("../../utils/cnxdia3.php");
 		<input readonly type="text" placeHolder="Titulo de la Noticia" name="pTituloNoticia" value="<?php echo $titulo; ?>"/>
 		<br/><br/>
 		<select name="pCategoriaPublicacion">
-		<option>Seleccione una Opción...</option>
 		
-		<?php 
-			
+
+			<?php
+
 			$view_users_query="SELECT * from categorias ORDER BY tituloCategoria ASC"; 
-        	$run=mysqli_query($dbcon,$view_users_query);  
-        	while($row=mysqli_fetch_array($run)){
-				echo'<OPTION VALUE="'.$row['idCategoria'].'">'.$row['tituloCategoria'].'</OPTION>';
-			
+	        $run2=mysqli_query($dbcon,$view_users_query);  
+	        
+	        while($row2=mysqli_fetch_array($run2)){
+	        	
+	        	if($row2['idCategoria'] == $row[3]) {
+	        		echo'<OPTION VALUE="'.$row2['idCategoria'].'" selected>'.$row2['tituloCategoria'].'</OPTION>';
+	        	} else {
+					echo'<OPTION VALUE="'.$row2['idCategoria'].'" >'.$row2['tituloCategoria'].'</OPTION>';
+				}
+				
+
 			}
 
-		}
- 
-		?>
+			?>
+
 
 		</select>
+		<?php
+	}
+	?>
 		<br/><br/>
 		<!--input type="text" placeHolder="Texto de la noticia" name="pNoticia" value="<?php echo $contenidoCompleto; ?>"/-->
 		<textarea name="pContenidoCompleto" rows="4" cols="50"><?php echo $contenidoCompleto; ?></textarea>
